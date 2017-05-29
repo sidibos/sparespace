@@ -2,7 +2,6 @@
 
 namespace App\SpaceInterface\User;
 
-use App\SpaceInterface\User\UserInterface;
 use App\User;
 
 class UserContract implements UserInterface
