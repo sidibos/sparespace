@@ -14,7 +14,7 @@ class UserContract implements UserInterface
         User::save($data);
     }
 
-    public function deleteuser($id) {
+    public function deleteUser($id) {
         $userObj = User::find($id);
         $userObj->delete();
     }

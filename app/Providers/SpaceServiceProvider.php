@@ -14,5 +14,6 @@ class SpaceServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('App\SpaceInterface\User\UserInterface','App\SpaceInterface\User\UserContract');
+        $this->app->bind('App\SpaceInterface\Address\AddressInterface','App\SpaceInterface\Address\AddressContract');
     }
 }

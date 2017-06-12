@@ -15,28 +15,34 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
+##################################
+#User
 $app->get('/user/{id}', 'Users\UserController@show');
 $app->put('/user/{id}', 'Users\UserController@update');
 $app->post('/user/', 'Users\UserController@store');
-$app->get('/user/all', 'Users\UserController@getAllUsers');
+#$app->get('/user/all', 'Users\UserController@getAllUsers');
 
 #############
 #workspace
 $app->get('/workspace/all', 'Spaces\WorkspaceController@getList');
-
 $app->get('workspace/{id}', 'Spaces\WorkspaceController@show');
 $app->put('workspace/{id}', 'Spaces\WorkspaceController@update');
 $app->post('workspace/', 'Spaces\WorkspaceController@store');
+
+
+###########################
+#adress
+$app->get('/address/{id}', 'Spaces\AddressController@show');
 
 $app->get('profile', [
     'middleware' => 'auth',
     'uses' => 'Users\UserController@showProfile'
 ]);
 
-$app->get('/users', function() {
+/*$app->get('/users', function() {
     return \App\User::all();
 });
-
+*/
 
 $app->get('test', function () {
     return 'This is it!';

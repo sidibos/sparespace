@@ -10,6 +10,11 @@ use App\Space;
 
 class WorkspaceController extends BaseController
 {
+    /**
+     * get the space details by id
+     * @param $id
+     * @return Response
+     */
     public function show($id)
     {
         $data = Space::find($id);
