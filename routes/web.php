@@ -18,9 +18,10 @@ $app->get('/', function () use ($app) {
 ##################################
 #User
 $app->get('/user/{id}', 'Users\UserController@show');
+$app->get('/user/', 'Users\UserController@getAllUsers');
 $app->put('/user/{id}', 'Users\UserController@update');
 $app->post('/user/', 'Users\UserController@store');
-#$app->get('/user/all', 'Users\UserController@getAllUsers');
+//$app->get('/user/all', 'Users\UserController@getAllUsers');
 
 #############
 #workspace

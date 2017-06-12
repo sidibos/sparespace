@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Spaces;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\SpaceCategory;
-use App\Space;
+use App\Models\Spaces\SpaceCategory;
+use App\Models\Spaces\Space;
 
 class WorkspaceController extends BaseController
 {

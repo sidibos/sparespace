@@ -2,7 +2,7 @@
 
 namespace App\SpaceInterface\User;
 
-use App\User;
+use App\Models\Users\User;
 
 class UserContract implements UserInterface
 {

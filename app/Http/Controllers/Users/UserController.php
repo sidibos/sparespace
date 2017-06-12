@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Users;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
-use App\SpaceInterface\User\UserContract;
+use App\SpaceInterface\User\UserInterface;
 
 class UserController extends BaseController
 {
@@ -40,7 +40,7 @@ class UserController extends BaseController
         //
     }
 
-    public function getAllUsers(UserContract $user)
+    public function getAllUsers(UserInterface $user)
     {
         return $user->getAllUsers();
     }

@@ -5,18 +5,18 @@ namespace App\Http\Controllers\Spaces;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Laravel\Lumen\Routing\Controller as BaseController;
-use App\SpaceInterface\Address\AddressContract;
+use App\SpaceInterface\Address\AddressInterface;
 
 class AddressController extends BaseController
 {
     /**
-     * @var AddressContract
+     * @var AddressInterface
      */
-    public $addressContract;
+    public $addressInterface;
 
-    public function __construct(AddressContract $addressContract)
+    public function __construct(AddressInterface $addressInterface)
     {
-        $this->addressContract = $addressContract;
+        $this->addressContract = $addressInterface;
     }
 
     public function show($id)
